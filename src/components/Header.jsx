@@ -1,16 +1,19 @@
 import React from 'react';
 import { FaMicrophone, FaCog, FaChevronLeft } from 'react-icons/fa';
+import styles from '../styles/components/Header.module.scss';
 
 const Header = () => (
-  <header>
-    <div>
+  <header className={styles.header}>
+    <div className={styles.header__item}>
       <FaChevronLeft />
       2015
     </div>
-    <div>
+    <div className={styles.header__item}>
       <p>most views</p>
     </div>
-    <div>
+    <div
+      className={`${styles.header__item} ${styles['header__item--gap-hug']}`}
+    >
       <FaMicrophone />
       <FaCog />
     </div>

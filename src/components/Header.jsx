@@ -1,15 +1,19 @@
 import React from 'react';
 import { FaMicrophone, FaCog, FaChevronLeft } from 'react-icons/fa';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/components/Header.module.scss';
 
 const Header = () => {
   const location = useLocation();
-  console.log();
+  const navigate = useNavigate();
+
   return (
     <header className={styles.header}>
       <div className={styles.header__item}>
-        <FaChevronLeft className={styles.header__icon_btn} />
+        <FaChevronLeft
+          className={styles.header__icon_btn}
+          onClick={() => navigate('/')}
+        />
         2015
       </div>
       <div className={styles.header__item}>

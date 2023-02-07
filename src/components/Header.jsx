@@ -5,7 +5,7 @@ import styles from '../styles/components/Header.module.scss';
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.header__item}>
-      <FaChevronLeft />
+      <FaChevronLeft className={styles.header__icon_btn} />
       2015
     </div>
     <div className={styles.header__item}>
@@ -14,8 +14,8 @@ const Header = () => (
     <div
       className={`${styles.header__item} ${styles['header__item--gap-hug']}`}
     >
-      <FaMicrophone />
-      <FaCog />
+      <FaMicrophone className={styles.header__icon_btn} />
+      <FaCog className={styles.header__icon_btn} />
     </div>
   </header>
 );

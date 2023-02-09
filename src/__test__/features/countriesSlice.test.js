@@ -30,4 +30,18 @@ describe('Countries redux state tests', () => {
     expect(state.status).toBe('succeeded');
     expect(state.countries.length).toBe(53);
   });
+
+  test('Countries rejected state', () => {
+    const prevState = { status: 'idle', countries: [], error: null };
+    const action = {
+      type: 'countries/FETCH_COUNTRIES/rejected',
+      error: { message: 'Not Found' },
+    };
+    const state = reducer(prevState, action);
+    expect(state).toEqual({
+      status: 'failed',
+      countries: [],
+      error: 'Not Found',
+    });
+  });
 });

@@ -1,5 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Category = () => <div>Category</div>;
+import {
+  fetchCountries,
+  getCountriesStatus,
+} from '../features/countries/countriesSlice';
+
+const Category = () => {
+  const dispatch = useDispatch();
+
+  const countriesStatus = useSelector(getCountriesStatus);
+  useEffect(() => {
+    if (countriesStatus === 'idle') {
+      dispatch(fetchCountries('europe'));
+    }
+  }, [countriesStatus, dispatch]);
+
+  return <>Category</>;
+};
 
 export default Category;

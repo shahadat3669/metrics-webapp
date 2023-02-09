@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchCountries = createAsyncThunk(
   'countries/FETCH_COUNTRIES',
@@ -21,3 +21,44 @@ export const fetchCountries = createAsyncThunk(
     return modifiedCountries;
   },
 );
+
+export const initialState = {
+  countries: [],
+  status: 'idle',
+  error: null,
+};
+
+export const countriesSlice = createSlice({
+  name: 'countries',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchCountries.pending, (state) => {
+        const newState = { ...state, status: 'loading' };
+        return newState;
+      })
+      .addCase(fetchCountries.fulfilled, (state, action) => {
+        const newState = {
+          ...state,
+          status: 'succeeded',
+          countries: action.payload,
+        };
+        return newState;
+      })
+      .addCase(fetchCountries.rejected, (state, action) => {
+        const newState = {
+          ...state,
+          status: 'failed',
+          error: action.error.message,
+        };
+        return newState;
+      });
+  },
+});
+
+export const getAllCountries = (state) => state.countries.countries;
+export const getCountriesStatus = (state) => state.countries.status;
+export const getCountriesError = (state) => state.countries.error;
+
+export default countriesSlice.reducer;

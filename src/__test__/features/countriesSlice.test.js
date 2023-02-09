@@ -1,5 +1,7 @@
 import store from '../../app/store';
-import reducer from '../../features/countries/countriesSlice';
+import reducer, {
+  fetchCountries,
+} from '../../features/countries/countriesSlice';
 
 describe('Countries redux state tests', () => {
   it('Initial State', () => {
@@ -19,5 +21,13 @@ describe('Countries redux state tests', () => {
       countries: [],
       error: null,
     });
+  });
+
+  it('Countries fulfilled state', async () => {
+    const result = await store.dispatch(fetchCountries('europe'));
+    expect(result.type).toBe('countries/FETCH_COUNTRIES/fulfilled');
+    const state = store.getState().countries;
+    expect(state.status).toBe('succeeded');
+    expect(state.countries.length).toBe(53);
   });
 });

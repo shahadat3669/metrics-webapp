@@ -60,5 +60,12 @@ export const countriesSlice = createSlice({
 export const getAllCountries = (state) => state.countries.countries;
 export const getCountriesStatus = (state) => state.countries.status;
 export const getCountriesError = (state) => state.countries.error;
+export const getCountry = (id) => (state) => {
+  const idInt = parseInt(id, 10);
+  const country = state.countries.countries.filter(
+    (country) => country.id === idInt,
+  );
+  return country[0];
+};
 
 export default countriesSlice.reducer;

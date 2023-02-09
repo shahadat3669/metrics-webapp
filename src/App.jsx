@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './pages/Home';
-import Single from './pages/Single';
+import Country from './pages/Country';
 import NoMatch from './pages/NoMatch';
 
 const App = () => (
@@ -16,8 +16,8 @@ const App = () => (
         element={<Home />}
       />
       <Route
-        path="about"
-        element={<Single />}
+        path="country/:id"
+        element={<Country />}
       />
 
       <Route

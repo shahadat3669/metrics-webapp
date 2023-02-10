@@ -1,0 +1,6 @@
+{
+  "moduleNameMapper": {
+    "swiper/css": "swiper/swiper.min.css"
+  },
+  "transformIgnorePatterns": ["node_modules/(?!(swiper|ssr-window|dom7)/)"]
+}

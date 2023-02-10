@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaMicrophone, FaCog, FaChevronLeft } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/components/Header.module.scss';
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <header className={styles.header}>
       <div className={styles.header__item}>
@@ -15,7 +16,7 @@ const Header = () => {
         2015
       </div>
       <div className={styles.header__item}>
-        <p>most views</p>
+        <p>{location.pathname === '/' ? 'most views' : 'town/city views'}</p>
       </div>
       <div
         className={`${styles.header__item} ${styles['header__item--gap-hug']}`}

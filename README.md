@@ -75,9 +75,13 @@ This project is a simple metrics app. The main features are:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+
+https://user-images.githubusercontent.com/55840999/218153654-be83251f-4a86-4c5e-89a4-ccde3aa9fc02.mp4
+
+
 - [Live Demo Link](https://matrics.onrender.com/)
-- [Presentation slide]("./presentation_slide.pdf)
-- [Presentation Link]("./presentation_video.mp4)
+- [Presentation slide]("./presentation_slide.pdf")
+- [Presentation Link]("./presentation_video.mp4")
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

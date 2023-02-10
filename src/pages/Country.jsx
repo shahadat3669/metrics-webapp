@@ -7,9 +7,11 @@ import styles from '../styles/pages/Country.module.scss';
 const Country = () => {
   const { id } = useParams();
   const country = useSelector(getCountry(id));
-
-  return (
-    <div className={styles.country}>
+  let contentToDisplay = '';
+  if (!country) {
+    contentToDisplay = <div className={styles.country__status}>Loading...</div>;
+  } else {
+    contentToDisplay = (
       <div className={styles.country__wrapper}>
         <div className={styles.country__top}>
           <div className={styles['country__flag-wrapper']}>
@@ -78,8 +80,10 @@ const Country = () => {
           </ul>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return <div className={styles.country}>{contentToDisplay}</div>;
 };
 
 export default Country;

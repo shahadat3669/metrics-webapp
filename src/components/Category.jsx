@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
 
+import { Pagination } from 'swiper';
 import styles from '../styles/components/Category.module.scss';
 import {
   fetchCountries,
@@ -25,7 +23,7 @@ const Category = () => {
   }, [countriesStatus, dispatch]);
 
   return (
-    <>
+    <div>
       <Swiper
         loop
         pagination={{
@@ -65,7 +63,7 @@ const Category = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

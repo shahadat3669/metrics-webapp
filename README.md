@@ -164,7 +164,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **We will implement dragons API**
+- [ ] **We will implement city details page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

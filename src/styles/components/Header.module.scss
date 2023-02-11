@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  background-color: #34538c;
+  color: #fff;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item--gap-hug {
+    gap: 2rem;
+  }
+
+  &__icon_btn {
+    cursor: pointer;
+  }
+}

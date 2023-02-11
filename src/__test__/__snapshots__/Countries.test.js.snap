@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets renders Rockets Page without crashing 1`] = `undefined`;
+
+exports[`Rockets renders Rockets Page without crashing 2`] = `
+<div
+  class="countries"
+>
+  <div
+    class="countries__bar"
+  >
+     COUNTRIES
+  </div>
+  <div
+    class="countries__list"
+  />
+</div>
+`;
+
+exports[`Rockets renders Rockets Page without crashing 3`] = `
+<div
+  class="countries"
+>
+  <div
+    class="countries__bar"
+  >
+     COUNTRIES
+  </div>
+  <div
+    class="countries__list"
+  />
+</div>
+`;

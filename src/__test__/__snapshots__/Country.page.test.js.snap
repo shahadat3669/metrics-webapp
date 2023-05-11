@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Country renders Country Page without crashing 1`] = `undefined`;
+
+exports[`Country renders Country Page without crashing 2`] = `
+<div
+  class="country"
+>
+  <div
+    class="country__status"
+  >
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Country renders Country Page without crashing 3`] = `
+<div
+  class="country"
+>
+  <div
+    class="country__status"
+  >
+    Loading...
+  </div>
+</div>
+`;
